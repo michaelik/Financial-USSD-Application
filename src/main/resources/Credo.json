@@ -1,0 +1,111 @@
+{
+    "1": {
+        "id": 230,
+        "menu_level": 1,
+        "menu_options": [
+            {
+                "type": "level",
+                "response": null,
+                "next_menu_level": 2,
+                "action": null
+            },
+            {
+                "type": "level",
+                "response": null,
+                "next_menu_level": 5,
+                "action": null
+            },
+            {
+                "type": "level",
+                "response": null,
+                "next_menu_level": 7,
+                "action": null
+            },
+            {
+                "type": "response",
+                "response": "END ${account_balance}",
+                "next_menu_level": null,
+                "action": "PROCESS_USER_ACCOUNT_BALANCE"
+            }
+        ],
+        "text": "CON What would you like to do\n1. Create an account\n2. Deposit\n3. Withdraw\n4. Check Balance"
+    },
+    "2": {
+        "id": 230,
+        "menu_level": 2,
+        "text": "CON Enter first name?",
+        "menu_options": [
+            {
+                "type": "level_name",
+                "response": null,
+                "next_menu_level": 3,
+                "action": null
+            }
+        ]
+    },
+    "3": {
+        "id": 230,
+        "menu_level": 3,
+        "text": "CON Enter last name?",
+        "menu_options": [
+            {
+                "type": "level_name",
+                "response": null,
+                "next_menu_level": 4,
+                "action": null
+            }
+        ]
+    },
+    "4": {
+        "id": 230,
+        "menu_level": 4,
+        "text": "CON Enter email?",
+        "menu_options": [
+            {
+                "type": "level_email",
+                "response": "END ${account_creation}",
+                "next_menu_level": null,
+                "action": "PROCESS_USER_ACCOUNT_CREATION"
+            }
+        ]
+    },
+    "5": {
+        "id": 230,
+        "menu_level": 5,
+        "text": "CON Enter Account Number?",
+        "menu_options": [
+            {
+                "type": "level_Account_number",
+                "response": "END ${deposit_amount}",
+                "next_menu_level": 6,
+                "action": null
+            }
+        ]
+    },
+    "6": {
+        "id": 230,
+        "menu_level": 5,
+        "text": "CON Enter Amount to deposit?",
+        "menu_options": [
+            {
+                "type": "level_d_amount",
+                "response": "END ${deposit_amount}",
+                "next_menu_level": null,
+                "action": "PROCESS_USER_DEPOSIT_AMOUNT"
+            }
+        ]
+    },
+    "7": {
+        "id": 230,
+        "menu_level": 7,
+        "text": "CON Enter Amount to Withdraw?",
+        "menu_options": [
+            {
+                "type": "level_w_amount",
+                "response": "END ${withdraw_amount}",
+                "next_menu_level": null,
+                "action": "PROCESS_USER_WITHDRAW_AMOUNT"
+            }
+        ]
+    }
+}
